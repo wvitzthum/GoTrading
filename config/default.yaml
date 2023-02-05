@@ -1,0 +1,11 @@
+alpaca:
+  tradeClient:
+    baseUrl: "https://paper-api.alpaca.markets"
+    apiSecret: "alpaca_api_secret_trade"
+    apiKey: "alpaca_api_key_trade"
+  marketDataClient:
+    baseUrl: "https://api.alpaca.markets"
+    apiSecret: "alpaca_api_secret_data"
+    apiKey: "alpaca_api_key_data"
+    dataURL: "https://data.alpaca.markets/v2"
+
