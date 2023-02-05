@@ -17,12 +17,12 @@ func (m *MarketDataClient) Init(apiKeyEnv, apiSecretEnv string, logger slog.Logg
 	return err
 }
 
-func (m *MarketDataClient)  GetTradeData() ([]marketdata.Bar, error) {
-	return m.client.GetBars("AAPL", marketdata.GetBarsRequest{
-		TimeFrame: marketdata.NewTimeFrame(1, marketdata.Day),
-		Start:      time.Date(2021, 4, 3, 0, 0, 0, 0, time.UTC),
-		End:        time.Date(2021, 4, 4, 5, 0, 0, 0, time.UTC),
-		TotalLimit: 5,
-		PageLimit:  2,
+func (m *MarketDataClient)  GetTradeData(symbol string, from, to time.Time) ([]marketdata.Bar, error) {
+	return m.client.GetBars(symbol, marketdata.GetBarsRequest{
+		TimeFrame: marketdata.NewTimeFrame(1, marketdata.Min),
+		Start:      from,
+		End:        to,
+		TotalLimit: 100,
+		PageLimit:  200,
 	})
 }

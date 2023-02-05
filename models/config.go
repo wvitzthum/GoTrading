@@ -2,6 +2,7 @@ package models
 
 type Config struct {
 	Alpaca AlpacaConfigurations `yaml:"alpaca"`
+	BadgerPath string `yaml:"badgerPath"`
 }
 
 type AlpacaConfigurations struct {

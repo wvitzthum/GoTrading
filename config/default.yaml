@@ -1,3 +1,5 @@
+badgerPath: "/badgerdata"
+
 alpaca:
   tradeClient:
     baseUrl: "https://paper-api.alpaca.markets"

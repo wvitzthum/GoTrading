@@ -25,5 +25,8 @@ func main() {
 		return
 	}
 
-	app.StartApp(config, logger)
+	err = app.InitApp(config, logger)
+	if err != nil {
+		logger.Error("Failed to init Application", err)
+	}
 }
